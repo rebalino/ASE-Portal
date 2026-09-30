@@ -1,0 +1,4 @@
+{
+  "name": "ase-portal",
+  "workspaces": ["backend", "frontend"]
+}

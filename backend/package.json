@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc --watch",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "assemble": "",
+    "build": "npm run check && npm run assemble"
+  },
+  "dependencies": {
+    "api": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "vitest": "^4.1.0"
+  }
+}
