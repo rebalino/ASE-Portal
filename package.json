@@ -1,4 +1,11 @@
 {
   "name": "ase-portal",
-  "workspaces": ["backend", "frontend", "api"]
+  "workspaces": [
+    "backend",
+    "frontend",
+    "api"
+  ],
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
 }
