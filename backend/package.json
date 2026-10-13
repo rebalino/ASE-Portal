@@ -9,7 +9,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run typecheck && npm run lint && npm run test",
-    "assemble": "",
+    "assemble": "esbuild src/index.ts --bundle --platform=node --outdir=dist",
     "build": "npm run check && npm run assemble"
   },
   "dependencies": {
@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
-    "vitest": "^4.1.0"
+    "esbuild": "^0.28.2"
   }
 }
