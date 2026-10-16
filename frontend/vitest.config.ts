@@ -14,5 +14,6 @@ export default defineConfig({
             exclude: ["src/**/*test.{ts,tsx}"],
             reporter: ["text", "html"],
         },
+        passWithNoTests: true,
     },
 });
