@@ -7,7 +7,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import {reactRefresh} from "eslint-plugin-react-refresh";
 
 export default defineConfig([
-    globalIgnores(["**/dist/", "**/node_modules/"]),
+    globalIgnores(["**/dist/", "**/node_modules/", "**/coverage/"]),
     // global
     {
         files: ["**/src/**/*.{ts,tsx}"],
