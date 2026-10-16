@@ -10,7 +10,7 @@ export default defineConfig([
     globalIgnores(["**/dist/", "**/node_modules/"]),
     // global
     {
-        files: ["**/*.{ts,tsx}"],
+        files: ["**/src/**/*.{ts,tsx}"],
         extends: [
             eslintJs.configs.recommended,
             tseslint.configs.recommended,
