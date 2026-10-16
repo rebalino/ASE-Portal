@@ -8,14 +8,17 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "check": "npm run typecheck && npm run lint && npm run test",
     "assemble": "node esbuild.mjs",
     "build": "npm run check && npm run assemble"
   },
   "dependencies": {
-    "api": "*"
+    "api": "*",
+    "express": "^5.3.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^25.6.0",
     "esbuild": "^0.28.2"
   }
