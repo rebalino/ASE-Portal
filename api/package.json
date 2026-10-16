@@ -3,5 +3,19 @@
   "version": "0.0.1",
   "type": "module",
   "main": "src/index.ts",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc --watch",
+    "lint": "eslint",
+    "check": "npm run typecheck && npm run lint",
+    "assemble": "tsc -b",
+    "build": "npm run check && npm run assemble"
+  }
 }
