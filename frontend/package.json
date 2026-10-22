@@ -22,7 +22,8 @@
     "@fontsource/open-sans": "^5.2.7",
     "api": "*",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router": "^8.5.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.0",
