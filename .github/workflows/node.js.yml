@@ -18,5 +18,9 @@ jobs:
       with:
         node-version: 24.x
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --ws --if-present
+    - name: Install dependencies
+      run: npm ci
+    - name: Build workspaces
+      run: |
+        npm run build -w api --if-present
+        npm run build -w backend -w frontend --if-present
