@@ -2,9 +2,9 @@
   "name": "ase-portal",
   "type": "module",
   "workspaces": [
+    "api",
     "backend",
-    "frontend",
-    "api"
+    "frontend"
   ],
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^5.26.0",
