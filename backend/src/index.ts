@@ -1,5 +1,6 @@
 import express from "express";
-import { ServerApi, ServerApiHelloWorld } from "api";
+import { ServerApi, ServerApiHelloWorld, ServerApiUsers } from "api";
+import { userRouter } from "./routes/user-routes";
 
 class ServerApiImpl implements ServerApi{
     async helloWorld(): Promise<string> {
@@ -18,15 +19,9 @@ class BackendServer {
         const app = express();
 
         // Add the JSON parsing middleware to the application to parse JSON request bodies.
-        app.use(express.json({ limit: '50mb' }));
+        app.use(express.json());
 
-        app.post('/ping', (req, res) => {
-            const data = req.body as unknown;
-            res.json({
-                success: true,
-                request: data,
-            });
-        });
+        app.use(ServerApiUsers, userRouter);
 
         app.get(ServerApiHelloWorld, async(req, res) => {
             res.send(await this.serverApi.helloWorld());

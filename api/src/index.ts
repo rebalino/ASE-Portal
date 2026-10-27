@@ -3,3 +3,4 @@ export interface ServerApi {
 }
 
 export const ServerApiHelloWorld = '/api/hello';
+export const ServerApiUsers = '/api/users';
